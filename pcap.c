@@ -78,7 +78,7 @@ void print_port(uint16_t src_port){
 }
 void print_payload(uint8_t payload[20]){
 	for(int i=0; i<20;i++){
-		printf("%c", payload[i]);
+		printf("%02X", payload[i]);
 	}
 	printf("\n");
 }
@@ -121,7 +121,7 @@ int main(int argc, char* argv[]) {
 		printf("\n");
 		printf("PORT NUM: src ");
 		print_port(tcp->src_port);
-		printf(" PORT NUM: src ");
+		printf(" PORT NUM: dst ");
 		print_port(tcp->dst_port);
 		printf("\n");
 		printf("Payload: ");
